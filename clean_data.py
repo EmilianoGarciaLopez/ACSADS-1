@@ -56,7 +56,7 @@ def create_dataframe_and_filter(csv_file):
     df.comment = df.comment.str.replace(r'http\S+', '')
     # remove all newlines
     df.comment = df.comment.str.replace(r'\r?\n|\r', '')
-    # removes all lines that have fewer than 5 characters
+    # removes all lines that have fewer than 30 characters
     df = df[df["comment"].str.len() > 30]
     return df
 
